@@ -1,23 +1,23 @@
 [
     {
-        "Charity name": "Birmingham Dog's Home",
-        "Address": "123 Animal Street",
-        "Telephone Number": "0121 785 8393",
-        "Facebook": "BDH",
-        "Opening Hours": "9:00am - 1:30p,"
+        "charity_name": "Birmingham Dog's Home",
+        "address": "123 Animal Street",
+        "telephone_number": "0121 785 8393",
+        "facebook": "BDH",
+        "opening_hours": "9:00am - 1:30pm"
+    }, 
+    {
+        "charity_name": "Cat's protection",
+        "address": "3 Meow Row",
+        "telephone_number": "0121 557 9059",
+        "facebook": "BhamCP",
+        "opening_hours": "10:00am - 2:30pm"
     },
     {
-        "Charity name": "Animal Charity",
-        "Address": "33 Animal Lane, Birmingham",
-        "Telephone Number": "01928 3883 488",
-        "Facebook": "BhamA",
-        "Opening Hours": "9:00am - 18:00"
-    },
-    {
-        "Charity name": "Cat's Protection",
-        "Address": "86 Julia Road",
-        "Telephone Number": "0948672384",
-        "Facebook": "Cat",
-        "Opening Hours": "10-2"
+        "charity_name": "Bird Sanctuary",
+        "address": "2 Cheep Road",
+        "telephone_number": "0121 785 9999",
+        "facebook": "welovebirds",
+        "opening_hours": "9:00am - 5:00pm"
     }
 ]
