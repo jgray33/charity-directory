@@ -1,0 +1,28 @@
+{
+  "name": "charity-directory",
+  "version": "1.0.0",
+  "description": "Charity directory",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgray33/charity-directory.git"
+  },
+  "author": "Julia, Dylan, Ayaanle, Farhah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgray33/charity-directory/issues"
+  },
+  "homepage": "https://github.com/jgray33/charity-directory#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "epxress": "^0.0.1-security",
+    "express-handlebars": "^6.0.3",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.17.0"
+  }
+}
