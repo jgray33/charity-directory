@@ -1,0 +1,35 @@
+.login-signup{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20vh;
+}
+.login-form {
+    border: 2px solid black;
+    padding: 3vh 10vw;
+    box-shadow: 5px 5px black;
+}
+.login-title{
+    text-align: center;
+    font-size: 25px;
+}
+.signup-form {
+    border: 2px solid black;
+    padding: 3vh 10vw;
+    box-shadow: 5px 5px black;
+}
+.signup-title{
+    text-align: center;
+    font-size: 25px;
+}
+.form-group{
+    font-size: 30px;
+}
+.form-input{
+    font-size: 20px;
+}
+.btn{
+    font-size: 30px;
+    align-items: center;
+    margin-top: 5vh;
+    margin-left: 8vw;
+}
