@@ -1,0 +1,23 @@
+[
+    {
+        "Charity name": "Birmingham Dog's Home",
+        "Address": "123 Animal Street",
+        "Telephone Number": "0121 785 8393",
+        "Facebook": "BDH",
+        "Opening Hours": "9:00am - 1:30p,"
+    },
+    {
+        "Charity name": "Animal Charity",
+        "Address": "33 Animal Lane, Birmingham",
+        "Telephone Number": "01928 3883 488",
+        "Facebook": "BhamA",
+        "Opening Hours": "9:00am - 18:00"
+    },
+    {
+        "Charity name": "Cat's Protection",
+        "Address": "86 Julia Road",
+        "Telephone Number": "0948672384",
+        "Facebook": "Cat",
+        "Opening Hours": "10-2"
+    }
+]
