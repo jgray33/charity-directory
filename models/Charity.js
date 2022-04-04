@@ -10,16 +10,12 @@ Charity.init({
     primaryKey: true,
     autoIncrement: true,
   },
-  charity_name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
   address: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  telephone_number: {
-    type: DataTypes.STRING,
+  telephoneNumber: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
   facebook: {
@@ -35,7 +31,7 @@ Charity.init({
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
+    underscored
 });
 
 module.exports = Charity
