@@ -15,8 +15,6 @@ router.get("/login", async (req,res) => {
 })
 
 
-<<<<<<< HEAD
-=======
 // console.log('**************' + req.session.username);
 router.get('/', (req, res) => {
   Post.findAll({
@@ -145,6 +143,5 @@ module.exports = router;
 
 
 
->>>>>>> main
 module.exports = router
 
