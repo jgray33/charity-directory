@@ -1,21 +1,21 @@
 [
     {
-      "name": "Ayaanle",
+      "username": "Ayaanle",
       "email": "ayaanle@gmail.com",
       "password": "password1"
     },
     {
-      "name": "Julia",
+      "username": "Julia",
       "email": "julia@gmail.com",
       "password": "password1"
     },
     {
-      "name": "Farhah",
+      "username": "Farhah",
       "email": "farhah@gmail.com",
       "password": "password2"
     },
     {
-      "name": "Dylan",
+      "username": "Dylan",
       "email": "dylan@gmail.com",
       "password": "password3"
     }
