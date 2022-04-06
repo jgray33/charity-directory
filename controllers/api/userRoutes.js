@@ -22,7 +22,7 @@
 //   module.exports = router;
 
 const router = require('express').Router();
-const { User } = require('../../models/User');
+const User = require('../../models/User');
 
 router.get('/ ', async (req, res) => {
   try {
@@ -92,18 +92,23 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+  console.log(req.body.username + "Login route")
   try {
+    console.log('poo')
     const userData = await User.findOne({
       where: { username: req.body.username },
     });
+    console.log('wee')
+    console.log(userData + "User data")
     if (!userData) {
       // res.status(400).json({ message: `${userData.username} does not exist` });
+     console.log(err)
       res
         .status(400)
         .json({ message: `${req.body.username} is not a valid username` });
       return;
     }
-
+    console.log("Valid password")
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
@@ -119,6 +124,7 @@ router.post('/login', async (req, res) => {
       res.json({ user: userData, message: 'You are now logged in!' });
     });
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });
