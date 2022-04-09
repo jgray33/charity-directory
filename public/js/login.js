@@ -1,5 +1,6 @@
 
 async function loginFormHandler(event) {
+  console.log("clicked")
   event.preventDefault();
 
   const username = document.querySelector("#username-login").value.trim();
@@ -17,8 +18,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
-      console.table(response);
+      console.log("All gravy")
     } else {
       alert(response.statusText);
       console.log(response);
@@ -27,5 +27,5 @@ async function loginFormHandler(event) {
 }
 
 document
-  .querySelector("#login-form")
-  .addEventListener("submit", loginFormHandler);
+  .querySelector("#loginBtn")
+  .addEventListener("click", loginFormHandler);
