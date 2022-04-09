@@ -6,10 +6,11 @@ const Charity = require("../models/Charity")
 router.get("/", async (req,res) => {
     try{
         const charityData = await Charity.findAll()
-        res.status(200).json(charityData)
-        console.log(charityData)
-    } catch (err) {
+        const profiles = charityData.map((profile) => profile.get({plain:true}))
+                res.render("charitypage", {profiles})
+            } catch (err) {
         res.status(500).json(err)
+        console.log(err)
     }
 })
 

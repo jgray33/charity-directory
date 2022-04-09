@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const { download } = require("express/lib/response");
 const User = require("../../models/User");
 
 router.get("/ ", async (req, res) => {
@@ -68,11 +67,13 @@ router.post("/signup", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  console.log("login route")
   try {
     const userData = await User.findOne({
       where: { username: req.body.username },
     });
     console.log(userData + "User data");
+
     if (!userData) {
       // res.status(400).json({ message: `${userData.username} does not exist` });
       console.log(err);
@@ -95,6 +96,7 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       console.log(userData.username + "You are now logged in!")
+      res.render("homepage")
     });
   } catch (err) {
     console.log(err);
