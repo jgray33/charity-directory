@@ -39,6 +39,7 @@ async function registerBtn(event) {
     });
 
     if (response.ok) {
+      alert('Registered!!')
       console.table(response);
     } else {
       console.log(response.statusText);
