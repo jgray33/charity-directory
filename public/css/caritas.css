@@ -6,8 +6,9 @@ body{
 	color: #fff;
     height: 100%;
 	width: 100%;
-	background-image: url("Animal.jpeg");
+	background-image: url("/assets/Animal.jpeg");
 	background-position: top;
+
 	background-size:cover;
 	background-repeat: no-repeat;
 }
