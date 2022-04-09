@@ -15,17 +15,20 @@ router.get("/", async (req,res) => {
 })
 
 router.post("/", async (req,res) => {
+    console.log("at the route")
+    console.log(req.body)
     try {
         const charityData = await Charity.create({
-            id: req.body.id,
-            charity_name: req.body.charity_name,
-            address: req.body.address, 
-            telephone_number: req.body.telephone_number,
-            facebook: req.body.facebook,
-            opening_hours: req.body.opening_hours
+            charity_name: req.body.charName,
+            address: req.body.addr,
+            telephone_number: req.body.number,
+            facebook: req.body.fb,
+            opening_hours: req.body.hours
         })
         res.status(200).json(charityData)
+        console.log("added to database")
     } catch(err) {
+        console.log(err)
         res.status(400).json(err)
     }
 })

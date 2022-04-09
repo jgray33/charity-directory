@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { User } = require('../models/User');
 
 router.get("/", async (req,res) => {
-   res.render ('charitypage', {
+   res.render ('homepage', {
      
    })
 })
@@ -12,6 +12,18 @@ router.get("/login", async (req,res) => {
    res.render ('login', {
      
    })
+})
+
+router.get("/get-involved", async (req,res) => {
+  res.render ('getInvolved', {
+    
+  })
+})
+
+router.get("/login", async (req,res) => {
+  res.render ('login', {
+    
+  })
 })
 
 
