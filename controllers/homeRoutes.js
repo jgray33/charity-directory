@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { User } = require('../models/User');
 
 router.get("/", async (req,res) => {
-   res.render ('charity-results', {
+   res.render ('charitypage', {
      
    })
 })
@@ -139,9 +139,3 @@ router.get('/posts-comments', (req, res) => {
 });
 
 module.exports = router;
-
-
-
-
-module.exports = router
-
