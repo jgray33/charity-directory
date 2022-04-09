@@ -1,0 +1,59 @@
+body{
+	margin:0;
+	padding:0;
+	background:#fff;
+	font-family: 'Raleway',sans-serif;
+	color: #fff;
+    height: 100%;
+	width: 100%;
+	background-image: url("Animal.jpeg");
+	background-position: top;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+.navbar{
+	margin-top:4%;
+}
+.navbar-brand{
+	color: #fff;
+	font-size:1.8em;
+	font-weight: 700;
+	margin-left: 10%;
+}
+.nav{
+	margin-right:10%; 
+}
+.nav li a{
+	color:#aaa;
+	font-size: 1.2em;
+}
+.info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+.info h1{
+	font-size: 2.5em;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+}
+.info p{
+	font-size: 2em;
+	font-weight: 500;
+	color: #aaa;
+	letter-spacing: 2px;
+}
+ .info a{
+	margin-left:50%;
+	transform: translateX(-50%);
+	color: #fff;
+	background: #037065;
+	padding:10px 20px; 
+	font-size: 2em;
+	font-weight: 600;
+}
+.info a:hover{
+	background: #16e1e1;
+}
+
