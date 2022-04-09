@@ -1,6 +1,7 @@
 const router = require("express").Router()
 const sequelize = require('../config/connection');
-const { User } = require('../models/User');
+const Charity = require("../models/Charity");
+const User = require("../models/User");
 
 router.get("/", async (req,res) => {
    res.render ('homepage', {
@@ -20,45 +21,33 @@ router.get("/get-involved", async (req,res) => {
   })
 })
 
-router.get("/login", async (req,res) => {
-  res.render ('login', {
-    
-  })
+router.get("/charity", async (req,res) => {
+  try{
+      const charityData = await Charity.findAll()
+      const profiles = charityData.map((profile) => profile.get({plain:true}))
+              res.render("charitypage", {profiles})
+          } catch (err) {
+      res.status(500).json(err)
+      console.log(err)
+  }
 })
 
 
-// console.log('**************' + req.session.username);
-router.get('/', (req, res) => {
-  Post.findAll({
-    attributes: ['id', 'title', 'content', 'created_at'],
-    include: [
-      {
-        model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        include: {
-          model: User,
-          attributes: ['username'],
-        },
-      },
-      {
-        model: User,
-        attributes: ['username'],
-      },
-    ],
-  })
-    .then((dbPostData) => {
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render('homepage', {
-        posts,
-        logged_in: req.session.logged_in,
-        username: req.session.username,
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+router.get("/:charity_name", async(req,res) => {
+  try {
+      const charityData =  await Charity.findOne({
+          where: { charity_name: req.params.charity_name },
+      })
+      if(!charityData){
+          res.status(404).json({message: "no charity under that name"})
+          return
+      }
+      res.status(200).json(charityData)
+      } catch (err){
+          res.status(500).json(err)
+          console.log(err)
+      }})
+
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
