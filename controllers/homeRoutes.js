@@ -14,6 +14,18 @@ router.get("/login", async (req,res) => {
    })
 })
 
+router.get("/get-involved", async (req,res) => {
+  res.render ('getInvolved', {
+    
+  })
+})
+
+router.get("/login", async (req,res) => {
+  res.render ('login', {
+    
+  })
+})
+
 
 // console.log('**************' + req.session.username);
 router.get('/', (req, res) => {
