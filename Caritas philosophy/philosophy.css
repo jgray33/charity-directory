@@ -35,7 +35,7 @@ body{
 .info h1{
 	font-size: 2.5em;
 	font-weight: 700;
-	color:#aaa ;
+	color: #aaa;
 	letter-spacing: 2px;
 }
 .info p{
@@ -44,16 +44,3 @@ body{
 	color: #aaa;
 	letter-spacing: 2px;
 }
- .info a{
-	margin-left:50%;
-	transform: translateX(-50%);
-	color: #fff;
-	background: #037065;
-	padding:10px 20px; 
-	font-size: 2em;
-	font-weight: 600;
-}
-.info a:hover{
-	background: #16e1e1;
-}
-
