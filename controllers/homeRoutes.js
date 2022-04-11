@@ -30,7 +30,29 @@ router.get("/all", async (req, res) => {
   }
 });
 
+router.get("/search/:charity_name", async (req, res) => {
+  console.log("Getting to route")
+  try {
+    const charityData = await Charity.findOne({
+      where: { charity_name: req.params.charity_name },
+    });
+    if (!charityData) {
+      res.status(404).json({ message: "no charity under that name" });
+           return;
+    }
 
+const pageData = await charityData.get({plain:true})
+console.log("Going to render")
+res.render("charity-search", {
+  ...pageData,
+  logged_in: true
+})
+      
+  } catch (err) {
+    res.status(500).json(err);
+    console.log(err);
+  }
+});
 
 router.get("/signup", (req, res) => {
   res.render("signup");
