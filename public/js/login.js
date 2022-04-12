@@ -18,7 +18,9 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
+      document.location.replace('/');
       console.log("All gravy")
+
     } else {
       alert(response.statusText);
       console.log(response);
