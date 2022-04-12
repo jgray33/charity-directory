@@ -14,10 +14,10 @@ body{
 }
 
 .navbar{
-	margin-top:4%;
+	margin-top:2%;
 }
 .navbar-brand{
-	color: #aaa;
+	color: #037065;
 	font-size:1.8em;
 	font-weight: 700;
 	margin-left: 10%;
@@ -26,9 +26,11 @@ body{
 	margin-right:10%; 
 }
 .nav li a{
-	color:#aaa;
+	color:#037065;
+	font-weight: 700;
 	font-size: 1.2em;
 }
+
 .info{
 	margin-top:15%;
 	transform: translateY(-15%);
@@ -57,3 +59,5 @@ body{
 .info a:hover{
 	background: #16e1e1;
 }
+
+
