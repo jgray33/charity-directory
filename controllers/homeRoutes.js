@@ -48,10 +48,8 @@ router.get("/category/:category_name", async (req, res) => {
       res.status(404).json({ message: "no matches" });
       return;
     }
-    
-
-    // const profile = charityData.map((profile) => profile.get({ plain: true }));
-    // res.render("charitypage", { profiles });
+        const profiles = charityData.map((profile) => profile.get({ plain: true }));
+    res.render("charitypage", { profiles });
   } catch (err) {
     res.status(500).json(err);
     console.log(err);
@@ -83,6 +81,10 @@ router.get("/search/:charity_name", async (req, res) => {
 
 router.get("/signup", (req, res) => {
   res.render("signup");
+});
+
+router.get("/test", (req, res) => {
+  res.render("test");
 });
 
 module.exports = router;
