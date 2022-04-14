@@ -1,0 +1,29 @@
+ [
+  {
+    "category_name": "Cats",
+    "id": 1
+  },
+  {
+    "category_name": "Dogs",
+    "id": 2
+
+  },
+  {
+    "category_name": "Birds",
+    "id": 3
+  },
+  {
+    "category_name": "Reptiles",
+    "id": 4
+  },
+  {
+    "category_name": "Horses",
+    "id": 5
+  },
+  {
+    "category_name": "Rabbits",
+    "id": 6
+  }
+]
+
+

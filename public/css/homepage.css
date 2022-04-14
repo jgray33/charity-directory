@@ -1,0 +1,15 @@
+.search-form-control{
+	margin: 0 auto;
+    width: 500px;
+    height: 38px;
+    margin-left: 150px;
+}
+
+.btn{
+    background-color: #037065;
+    color: white;
+}
+
+#caritas {
+    margin-top: 10px;
+}

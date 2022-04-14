@@ -1,53 +1,5 @@
 const router = require("express").Router();
-const { download } = require("express/lib/response");
 const User = require("../../models/User");
-
-router.get("/ ", async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ["password"] },
-    });
-    res.status(200).json(userData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-// Return all posts authored by this userid
-router.get("/:id", async (req, res) => {
-  try {
-    const userData = await User.findOne({
-      attributes: { exclude: ["password"] },
-      where: { id: req.params.id },
-      include: [
-        {
-          model: Post,
-          attributes: ["id", "title", "content", "created_at"],
-        },
-        {
-          model: Comment,
-          attributes: ["id", "comment_text", "created_at"],
-          include: {
-            model: Post,
-            attributes: ["title"],
-          },
-        },
-        {
-          model: Post,
-          attributes: ["title"],
-        },
-      ],
-    });
-    console.log(userData);
-    if (!userData) {
-      res.status(404).json({ message: `No such user id ${req.params.id}` });
-      return;
-    }
-    res.status(200).json(userData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
 
 router.post("/signup", async (req, res) => {
   try {
@@ -68,11 +20,13 @@ router.post("/signup", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  console.log("login route")
   try {
     const userData = await User.findOne({
       where: { username: req.body.username },
     });
     console.log(userData + "User data");
+
     if (!userData) {
       // res.status(400).json({ message: `${userData.username} does not exist` });
       console.log(err);
@@ -93,8 +47,8 @@ router.post("/login", async (req, res) => {
       req.session.user_id = userData.id;
       req.session.username = userData.username;
       req.session.logged_in = true;
-
       console.log(userData.username + "You are now logged in!")
+      res.render("homepage")
     });
   } catch (err) {
     console.log(err);
@@ -110,12 +64,9 @@ router.post("/logout", async (req, res) => {
       });
     } else {
       res.status(404).end();
-      // somehow you're attempted to logout a session that doesn't exist.
-      // This might be because the session timeed out and then the user attempted to log out.
-    }
+         }
   } catch {
     res.status(400).end();
-    // you'd get here if there was a session found but the destroy failed / super rare
   }
 });
 
