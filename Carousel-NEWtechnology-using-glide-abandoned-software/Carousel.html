@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Carousel.css"> 
-    <link rel="stylesheet" href="css/Carousel-core.css">
-    <link rel="stylesheet" href="css/Carousel-theme.css">
+    <link rel="stylesheet" href="Carousel.css"> 
+    <!-- Required Core Stylesheet -->
+<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+<!-- Optional Theme Stylesheet -->
+<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <title>Carousel</title>
 </head>
 <body>
@@ -32,19 +35,11 @@
             </div>
           </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+   
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
-<script>
-  const config = {
-    type: 'carousel',
-    perView: 3,
-    Breakpoints: {
-  800: { perView: 2 
-  },
-  }};
-  new Glide('.glide, config').mount()
-</script>
+
+  <script src="Carousel.js"></script>
     
 </body>
 </html>
