@@ -4,17 +4,19 @@ body{
 	background:#fff;
 	font-family: 'Raleway',sans-serif;
 	color: #fff;
-    height: 100%;
-	width: 100%;
 	background-image: url("/assets/Animal.jpeg");
-	background-position: top;
+	background-position: 0 auto;
 
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 
 .navbar{
-	margin-top:2%;
+	margin: 0 auto;
+	margin: 0px -13px 0px -13px;
+	background-color: rgb(228, 228, 228);
+	padding-top: 1px;
+	padding-bottom: 1px;
 }
 .navbar-brand{
 	color: #037065;
@@ -28,7 +30,7 @@ body{
 .nav li a{
 	color:#037065;
 	font-weight: 700;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 .info{
