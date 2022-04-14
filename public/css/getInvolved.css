@@ -1,38 +1,33 @@
 .main-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    border: 2px black solid;
-    background-color: lightgray;
-    max-width: 40%;
-    margin-top: 30px;
-    box-shadow: black 5px 5px;
-    margin-bottom: 100px;
+    padding: 30px;
+  width: 50%;
+  max-width: 500px;
+  text-align: center;
+  color: #037065;
+  background-color: rgb(228, 228, 228);
+  font-size: 20px;
+  margin-top: 100px;
+  margin-left:470px;
 }
 
 .forms{
     margin-bottom: 10px;
 }
 
-h4{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 700;
-    color: #037065;
-    margin-top: 10px;
-}
+#get-involved-label {
+    text-align: center
+};
 
 .form-control{
-    width: 350px;
+    width: 150px;
 }
 
-.get-involved-btn {
-    width: 120px;
-    height: 40px;
-    margin-top: 10px;
-    margin-left: 120px;
+#btn-register {
     background-color: #037065;
     color: white;
-    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+label{
+    font-weight: 700;
 }
