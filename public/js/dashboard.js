@@ -1,8 +1,9 @@
-const title = document.querySelector("#title-register");
-const contents = document.querySelector("#contents-register");
+const title = document.querySelector("#title-dash");
+const contents = document.querySelector("#contents-dash");
 const dashBtn = document.querySelector("#dashboard-btn");
 
-function dashboard() {
+function dashboard(event) {
+    event.preventDefault();
   console.log(
     title.value,
     contents.value
@@ -10,4 +11,4 @@ function dashboard() {
 }
 
 
-btn.addEventListener("click", dashboard);
+dashBtn.addEventListener("click", dashboard);
