@@ -1,4 +1,5 @@
 const router = require("express").Router()
+const { route } = require("express/lib/application")
 const Charity = require("../../models/Charity")
 
 router.post("/", async (req,res) => {
@@ -19,6 +20,8 @@ router.post("/", async (req,res) => {
         res.status(400).json(err)
     }
 })
+
+router.put("/:charity")
 
 
 
