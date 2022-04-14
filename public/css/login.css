@@ -153,20 +153,47 @@ a{color:inherit;text-decoration:none}
   text-align:center;
 }   */  
 
-.card{
-  padding: 20px;
-  width: 80%;
-  max-width: 500px;
-  text-align: center;
-  font-family: Arial;
-  margin-top: 100px;
-  margin-left:450px;
-}
-
-
  /* body{
   background:url(https://unionlakepetservices.com/wp-content/uploads/2019/03/heroimage0.129624001532627274.jpg)
  
 }  */
  
 
+.card{
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  color: #037065;
+  background-color: rgb(228, 228, 228);
+  font-family: Arial;
+  font-size: 20px;
+  margin-top: 100px;
+  margin-left:470px;
+}
+
+
+h3{
+  font-weight: 700;
+}
+
+#username-login{
+  margin-top: 5px;
+}
+
+#password-login{
+  margin-top: 5px;
+}
+
+label{
+  margin-top: 10px;
+}
+
+#loginBtn{
+  margin-top: 10px;
+}
+
+
+.login-link{
+  text-decoration: none;
+}
