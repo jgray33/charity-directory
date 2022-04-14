@@ -6,6 +6,6 @@ const postRoutes = require("./postRoutes")
 
 router.use('/users', userRoutes);
 router.use("/charity", charityRoutes);
-router.use("/post", postRoutes);
+router.use("/api/post", postRoutes);
 
 module.exports = router;
