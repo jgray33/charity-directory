@@ -1,23 +1,17 @@
 [
     {
-        "charity_name": "Birmingham Dog's Home",
-        "address": "123 Animal Street",
-        "telephone_number": "0121 785 8393",
-        "facebook": "BDH",
-        "opening_hours": "9:00am - 1:30pm"
+        "post_title": "Dog needs home",
+        "post_contents": "Cute dog, very friendly & needs home",
+        "user_id": 1
     }, 
     {
-        "charity_name": "Cat's protection",
-        "address": "3 Meow Row",
-        "telephone_number": "0121 557 9059",
-        "facebook": "BhamCP",
-        "opening_hours": "10:00am - 2:30pm"
-    },
+        "post_title": "Kitten needs home",
+        "post_contents": "New born kitten, very cute & needs home",
+        "user_id": 2
+    }, 
     {
-        "charity_name": "Bird",
-        "address": "2 Cheep Road",
-        "telephone_number": "0121 785 9999",
-        "facebook": "welovebirds",
-        "opening_hours": "9:00am - 5:00pm"
+        "post_title": "Horse",
+        "post_contents": "I can't look after my horse anymore, needs home",
+        "user_id": 3
     }
 ]
