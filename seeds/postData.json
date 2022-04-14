@@ -1,0 +1,17 @@
+[
+    {
+        "post_title": "Dog needs home",
+        "post_contents": "Cute dog, very friendly & needs home",
+        "user_id": 1
+    }, 
+    {
+        "post_title": "Kitten needs home",
+        "post_contents": "New born kitten, very cute & needs home",
+        "user_id": 2
+    }, 
+    {
+        "post_title": "Horse",
+        "post_contents": "I can't look after my horse anymore, needs home",
+        "user_id": 3
+    }
+]
