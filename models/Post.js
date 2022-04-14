@@ -1,40 +1,29 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Charity extends Model {}
+class Post extends Model {}
 
-Charity.init({
+Post.init({
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
   },
-  charity_name: {
+  post_title: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  address: {
+  post_contents: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  telephone_number: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  facebook: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  opening_hours: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  category_id: {
+  user_id: {
     type: DataTypes.INTEGER,
+    allowNull: false,
     references: {
-      model: "category",
-      key: "id"
+      model: "user",
+      key: "id",
     }
   },
 },
@@ -43,7 +32,7 @@ Charity.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "charity"
+    modelName: "post"
 });
 
-module.exports = Charity
+module.exports = Post

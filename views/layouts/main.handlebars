@@ -15,8 +15,9 @@
 
     {{!-- <link rel="stylesheet" href="/css/style.css"> --}}
   <link rel="stylesheet" href="/css/login.css">
-  {{!-- <link rel="stylesheet" href="/css/getInvolved.css"> --}}
+  <link rel="stylesheet" href="/css/getInvolved.css">
     <link rel="stylesheet" href="/css/caritas.css">
+    <link rel="stylesheet" href="/css/homepage.css">
 
 
 
@@ -48,11 +49,12 @@
 					
             <li class="nav-item">
           {{#if logged_in}}
-          <a class="nav-link" href="/" id="logout">LOGOUT [{{username}}]</a>
+          <a class="nav-link" href="/" id="logout">LOGOUT {{username}}</a>
           {{else}}
           <a class="nav-link" href="/login">LOGIN</a>
           {{/if}}
         </li>
+
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           CATEGORIES
@@ -63,6 +65,13 @@
         <a class="dropdown-item" href="#">DOG</a>
         </div>
       </li>
+
+                        <form class="d-flex">
+                            <input class="main-form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                          </form>
+					</ul>
+
 				</nav>
 			</div>
 
