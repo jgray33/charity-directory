@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Carousel.css"> 
+    <!-- Required Core Stylesheet -->
+<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+<!-- Optional Theme Stylesheet -->
+<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <title>Carousel</title>
+</head>
+<body>
+    <div class="container">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide"><img src="images/animal1.jpeg" alt=""></li>
+                <li class="glide__slide"><img src="images/animal2.jpeg" alt=""></li>
+                <li class="glide__slide"><img src="images/animal3.jpeg" alt=""></li>
+                <li class="glide__slide"><img src="images/animal4.jpeg" alt=""></li>
+                <li class="glide__slide"><img src="images/animal5.jpeg" alt=""></li>
+                <li class="glide__slide"><img src="images/animal6.webp" alt=""></li>
+                <li class="glide__slide"><img src="images/animal7.jpeg" alt=""></li>
+                <li class="glide__slide"><img src="images/animal9.jpeg" alt=""></li>
+                <li class="glide__slide"><img src="images/animal10.jpeg" alt=""></li>
+              </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+              </div>
+            </div>
+          </div>
+    </div>
+   
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+
+  <script src="Carousel.js"></script>
+    
+</body>
+</html>

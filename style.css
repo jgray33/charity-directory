@@ -1,85 +1,12 @@
-body{
-	margin:0;
-	padding:0;
-	background:#fff;
-	font-family: 'Raleway',sans-serif;
-	color: #fff;
-	background-image: url("/assets/Animal.jpeg");
-	background-position: 0 auto;
-
-	background-size:cover;
-	background-repeat: no-repeat;
-}
-
-
-.navbar
-{
-	margin-top:4%;
-}
-.navbar-brand
-{
-	color: #aaa;
-
-.navbar{
-	margin: 0 auto;
-	margin: 0px -13px 0px -13px;
-	background-color: rgb(228, 228, 228);
-	padding-top: 1px;
-	padding-bottom: 1px;
-}
-.navbar-brand{
-	color: #037065;
-
-	font-size:1.8em;
-	font-weight: 700;
-	margin-left: 10%;
-}
-.nav{
-	margin-right:10%; 
-}
-.nav li a{
-	color:#037065;
-	font-weight: 700;
-	font-size: 1.1em;
-}
-
-.info{
-	margin-top:15%;
-	transform: translateY(-15%);
-}
-.info h1{
-	font-size: 2.5em;
-	font-weight: 700;
-	color:#aaa ;
-	letter-spacing: 2px;
-}
-.info p{
-	font-size: 2em;
-	font-weight: 500;
-	color: #aaa;
-	letter-spacing: 2px;
-}
- .info a{
-	margin-left:50%;
-	transform: translateX(-50%);
-	color: #fff;
-	background: #037065;
-	padding:10px 20px; 
-	font-size: 2em;
-	font-weight: 600;
-}
-.info a:hover{
-	background: #16e1e1;
-}
-
-
+body {
+    background-color:  #eee;
+  }
   .title {
    
       margin-bottom: 50px;
       text-transform: uppercase;
   }
   
-
   .card-block {
       font-size: 1em;
       position: relative;
@@ -88,9 +15,6 @@ body{
       border: none;
       border-top: 1px solid rgba(34, 36, 38, .1);
       box-shadow: none;
-    width:320px;
-    margin-right:-90px;
-
        
   }
   .card {
@@ -100,11 +24,7 @@ body{
       border: none;
       border-radius: .28571429rem;
       box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-      margin-top:100px;
-   
-  
-      
-    
+      margin-top:20px;
   }
   
   .carousel-indicators li {
@@ -121,7 +41,7 @@ body{
   }
   .carousel-indicators .active {
       background-color: white;
-      max-width: 220x;
+      max-width: 12px;
       margin: 0 3px;
       height: 12px;
   }
@@ -129,22 +49,12 @@ body{
    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
   }
   
-   .carousel-control-next-icon {
+  /* .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
   }
-
-
+   lex-direction: column;
+  }
+   */
   .btn {
     margin-top: auto;
   }
-
-  
-  
-   /* body{
-    background:url(https://unionlakepetservices.com/wp-content/uploads/2019/03/heroimage0.129624001532627274.jpg)
-   
-  }  */
-   
-  
-  
-
