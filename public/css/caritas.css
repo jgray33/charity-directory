@@ -19,6 +19,7 @@ body{
 .navbar-brand
 {
 	color: #aaa;
+}
 
 .navbar{
 	margin: 0 auto;
@@ -27,6 +28,7 @@ body{
 	padding-top: 1px;
 	padding-bottom: 1px;
 }
+
 .navbar-brand{
 	color: #037065;
 
