@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Carousel.css"> 
-    <link rel="stylesheet" href="Carousel-core.css">
-    <link rel="stylesheet" href="Carousel-theme.css">
+    <link rel="stylesheet" href="css/Carousel.css"> 
+    <link rel="stylesheet" href="css/Carousel-core.css">
+    <link rel="stylesheet" href="css/Carousel-theme.css">
     <title>Carousel</title>
 </head>
 <body>
@@ -26,7 +26,7 @@
               </ul>
             </div>
             <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
                 <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
               </div>
             </div>
@@ -36,7 +36,14 @@
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
 <script>
-  new Glide('.glide').mount()
+  const config = {
+    type: 'carousel',
+    perView: 3,
+    Breakpoints: {
+  800: { perView: 2 
+  },
+  }};
+  new Glide('.glide, config').mount()
 </script>
     
 </body>
