@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const Post = require("../../models/Post")
+const Post = require("../../models/Post");
 
 router.get("/", async (req, res) => {
     console.log("got to the route")
@@ -27,6 +27,23 @@ router.post("/", async (req,res) => {
         res.status(400).json(err)
     }
 })
+
+router.delete('/:id', async(req, res) => {
+  try {
+    const postData = await Post.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      }
+    })
+    if(!postData) {
+      console.log("no post with that ID")
+    }
+    res.status(200).json(postData)
+  } catch(err) {
+    res.status(500).json(err)
+  }})
+
 
 
 module.exports = router
