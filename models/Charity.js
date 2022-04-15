@@ -42,11 +42,26 @@ Charity.init({
       allowNull: false,
   },
 
+  aboutUs2: {
+    type: DataTypes.STRING,
+    allowNull: false,
+},
+
+aboutUs3: {
+  type: DataTypes.STRING,
+  allowNull: false,
+},
+
+value2: {
+  type: DataTypes.STRING,
+  allowNull: false,
+},
   values: {
   type: DataTypes.STRING,
   allowNull: false,
-}
 },
+},
+
 
 {
     sequelize,

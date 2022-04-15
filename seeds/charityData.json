@@ -5,8 +5,11 @@
         "telephone_number": "0121 785 8393",
         "facebook": "BDH",
         "opening_hours": "9:00am - 1:30pm",
-        "values": "bskjfskljglskgjalkgjk;fjsk;hjak;",
+        "values": "Our vision is a world where every cat is treated with kindness and an understanding of its needs",
+        "value2":"Our new strategy acknowledges that cat welfare education and information for adults and children will be essential to achieving our vision of a world where every cat is treated with kindness and an understanding of its needs. ",
         "aboutUs": "about us",
+        "aboutUs2":"These include the charity's flagship adoption centre in Chelwood Gate, Sussex where our administrative offices can also be found Cats Protection is governed by a Board of Trustees.",
+        "aboutUs3":"There are so many adorable cats available for adoption in our centres, each of them with a unique story and a personality ready-made!",
         "category_id": 1
     }, 
     {
@@ -15,8 +18,11 @@
         "telephone_number": "0121 557 9059",
         "facebook": "BhamCP",
         "opening_hours": "10:00am - 2:30pm",
-        "values": "bskjfskljglskgjalkgjk;fjsk;hjak;",
-        "aboutUs": "about us",
+        "values": "Our vision is a world where every cat is treated with kindness and an understanding of its needs",
+        "value2":"Our new strategy acknowledges that cat welfare education and information for adults and children will be essential to achieving our vision of a world where every cat is treated with kindness and an understanding of its needs. ",
+        "aboutUs": "Every year, we help over 200,000 cats and kittens owing to our network of over 230 volunteer-run branches and over 30 centres.",
+        "aboutUs2":"These include the charity's flagship adoption centre in Chelwood Gate, Sussex where our administrative offices can also be found Cats Protection is governed by a Board of Trustees.",
+        "aboutUs3":"There are so many adorable cats available for adoption in our centres, each of them with a unique story and a personality ready-made!",
         "category_id": 2
     },
     {
@@ -25,8 +31,11 @@
         "telephone_number": "0121 785 9999",
         "facebook": "welovebirds",
         "opening_hours": "9:00am - 5:00pm",
-        "values": "bskjfskljglskgjalkgjk;fjsk;hjak;",
-        "aboutUs": "about us",
+        "values": "Our vision is a world where every cat is treated with kindness and an understanding of its needs",
+        "value2":"Our new strategy acknowledges that cat welfare education and information for adults and children will be essential to achieving our vision of a world where every cat is treated with kindness and an understanding of its needs. F",
+        "aboutUs": " about us",
+        "aboutUs2":"These include the charity's flagship adoption centre in Chelwood Gate, Sussex where our administrative offices can also be found Cats Protection is governed by a Board of Trustees.",
+        "aboutUs3":"There are so many adorable cats available for adoption in our centres, each of them with a unique story and a personality ready-made!",
         "category_id": 3
     }
 ]
