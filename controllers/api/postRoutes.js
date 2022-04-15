@@ -12,12 +12,12 @@ router.get("/", async (req, res) => {
   });
 
 router.post("/", async (req,res) => {
-    console.log("at the route")
+    console.log("at the post route")
     console.log(req.body)
     try {
         const postData = await Post.create({
-            post_title: req.body.title,
-            post_contents: req.body.contents,
+            post_title: req.body.postTitle,
+            post_contents: req.body.postContents,
             user_id: req.session.user_id
         })
         res.status(200).json(postData)

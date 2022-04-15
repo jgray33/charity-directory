@@ -1,5 +1,4 @@
 const router = require("express").Router()
-const { route } = require("express/lib/application")
 const Charity = require("../../models/Charity")
 
 router.post("/", async (req,res) => {
