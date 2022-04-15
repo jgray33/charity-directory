@@ -14,9 +14,7 @@ async function dashboardBtn(event) {
     const postTitle = title.value;
     const postContents = contents.value;
 
-if (title && contents) {
-    console.log("working");
-      
+if (postTitle && postContents) {    
     const response = await fetch("/api/post", {
       method: "POST",
       body: JSON.stringify({
@@ -27,7 +25,7 @@ if (title && contents) {
     });
 
     if (response.ok) {
-      alert('Registered!!')
+      document.location.replace("/newsfeed")
       console.table(response);
     } else {
       console.log(response.statusText);
