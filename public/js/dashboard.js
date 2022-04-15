@@ -25,7 +25,7 @@ if (postTitle && postContents) {
     });
 
     if (response.ok) {
-      alert('Registered!!')
+      document.location.replace("/newsfeed")
       console.table(response);
     } else {
       console.log(response.statusText);

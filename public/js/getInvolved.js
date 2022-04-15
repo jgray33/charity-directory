@@ -39,7 +39,7 @@ async function registerBtn(event) {
     });
 
     if (response.ok) {
-      alert('Registered!!')
+      document.location.replace("/all")
       console.table(response);
     } else {
       console.log(response.statusText);

@@ -15,9 +15,12 @@ router.get("/dashboard", async (req, res) => {
 
 router.get("/newsfeed", async (req, res) => {
 try {
-  const newsfeedData = await Post.findAll()
+  const newsfeedData = await Post.findAll({
+    include:[ {model: User }]
+  })
   const posts = newsfeedData.map((post) => post.get({plain:true}))
   res.render("newsfeed", {posts})
+  console.log(posts)
 } catch (err) {
   res.status(500).json(err)
   console.log(err)
