@@ -1,4 +1,4 @@
- body {
+ /* body {
     background-color:  #eee;
   }
   .title {
@@ -10,12 +10,11 @@
   .card-block {
       font-size: 1em;
       position: relative;
-      margin: 0;
+      margin: 0 auto;
       padding: 1em;
       border: none;
       border-top: 1px solid rgba(34, 36, 38, .1);
       box-shadow: none;
-       
   }
   .card {
       font-size: 1em;
@@ -25,9 +24,26 @@
       border-radius: .28571429rem;
       box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
       margin-top:20px;
+  } */
+
+
+  #containers{
+      display: flex;
+      flex-direction: row;
   }
-  
 
+  .carousel-inner{
+      margin-left: 35px;
+  }
 
+  #title-card{
+      font-size: 22px;
+      margin-right: 10px;
+  }
+
+  .text-secondary{
+      font-size: 16px;
+      margin-right: 10px;
+  }
 
   
