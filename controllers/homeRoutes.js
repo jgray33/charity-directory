@@ -4,11 +4,32 @@ const { Category } = require("../models");
 const Charity = require("../models/Charity");
 const User = require("../models/User");
 const Post = require("../models/Post")
+
+=======
 const withAuth = require("../utils/auth")
+
 
 // Homepage
 router.get("/", async (req, res) => {
-  res.render("homepage"); 
+  res.render("homepage");
+});
+
+router.get("/dashboard", async (req, res) => {
+  res.render("dashboard");
+});
+
+router.get("/newsfeed", async (req, res) => {
+try {
+  const newsfeedData = await Post.findAll({
+    include:[ {model: User }]
+  })
+  const posts = newsfeedData.map((post) => post.get({plain:true}))
+  res.render("newsfeed", {posts})
+  console.log(posts)
+} catch (err) {
+  res.status(500).json(err)
+  console.log(err)
+}
 });
 
 // Login page
@@ -94,6 +115,7 @@ router.get("/category/:category_name", withAuth, async (req, res) => {
     }
         const profiles = charityData.map((profile) => profile.get({ plain: true }));
     res.render("charity-search", { profiles });
+
   } catch (err) {
     res.status(500).json(err);
     console.log(err);
@@ -124,5 +146,9 @@ router.get("/search/:charity_name", withAuth, async (req, res) => {
   }
 });
 
+
+router.get("/test", (req, res) => {
+  res.render("test");
+});
 
 module.exports = router;
