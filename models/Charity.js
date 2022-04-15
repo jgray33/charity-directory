@@ -35,9 +35,19 @@ Charity.init({
     references: {
       model: "category",
       key: "id"
-    }
+    },
   },
+    aboutUs: {
+      type: DataTypes.STRING,
+      allowNull: false,
+  },
+
+  values: {
+  type: DataTypes.STRING,
+  allowNull: false,
+}
 },
+
 {
     sequelize,
     timestamps: false,
