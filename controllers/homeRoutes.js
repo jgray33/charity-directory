@@ -3,13 +3,25 @@ const sequelize = require("../config/connection");
 const { Category } = require("../models");
 const Charity = require("../models/Charity");
 const User = require("../models/User");
+const Post = require("../models/Post")
 
 router.get("/", async (req, res) => {
-  res.render("homepage", {});
+  res.render("homepage");
 });
 
 router.get("/dashboard", async (req, res) => {
-  res.render("dashboard", {});
+  res.render("dashboard");
+});
+
+router.get("/newsfeed", async (req, res) => {
+try {
+  const newsfeedData = await Post.findAll()
+  const posts = newsfeedData.map((post) => post.get({plain:true}))
+  res.render("newsfeed", {posts})
+} catch (err) {
+  res.status(500).json(err)
+  console.log(err)
+}
 });
 
 router.get("/login", (req, res) => {

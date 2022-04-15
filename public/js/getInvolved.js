@@ -26,7 +26,7 @@ async function registerBtn(event) {
   if (charityName && address && phoneNumber && facebook && openingHours) {
     console.log("working");
       
-    const response = await fetch("/charity", {
+    const response = await fetch("/api/charity", {
       method: "POST",
       body: JSON.stringify({
         charName,
