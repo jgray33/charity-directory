@@ -3,13 +3,28 @@ const sequelize = require("../config/connection");
 const { Category } = require("../models");
 const Charity = require("../models/Charity");
 const User = require("../models/User");
+const Post = require("../models/Post")
 
 router.get("/", async (req, res) => {
-  res.render("homepage", {});
+  res.render("homepage");
 });
 
 router.get("/dashboard", async (req, res) => {
-  res.render("dashboard", {});
+  res.render("dashboard");
+});
+
+router.get("/newsfeed", async (req, res) => {
+try {
+  const newsfeedData = await Post.findAll({
+    include:[ {model: User }]
+  })
+  const posts = newsfeedData.map((post) => post.get({plain:true}))
+  res.render("newsfeed", {posts})
+  console.log(posts)
+} catch (err) {
+  res.status(500).json(err)
+  console.log(err)
+}
 });
 
 router.get("/login", (req, res) => {
@@ -52,10 +67,8 @@ router.get("/category/:category_name", async (req, res) => {
       res.status(404).json({ message: "no matches" });
       return;
     }
-    
-
-    // const profile = charityData.map((profile) => profile.get({ plain: true }));
-    // res.render("charitypage", { profiles });
+        const profiles = charityData.map((profile) => profile.get({ plain: true }));
+    res.render("charitypage", { profiles });
   } catch (err) {
     res.status(500).json(err);
     console.log(err);
@@ -87,6 +100,10 @@ router.get("/search/:charity_name", async (req, res) => {
 
 router.get("/signup", (req, res) => {
   res.render("signup");
+});
+
+router.get("/test", (req, res) => {
+  res.render("test");
 });
 
 module.exports = router;

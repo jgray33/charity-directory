@@ -12,13 +12,13 @@ router.get("/", async (req, res) => {
   });
 
 router.post("/", async (req,res) => {
-    console.log("at the route")
+    console.log("at the post route")
     console.log(req.body)
     try {
         const postData = await Post.create({
-            post_title: req.body.post_title,
-            post_contents: req.body.post_contents,
-            user_id: req.body.user_id
+            post_title: req.body.postTitle,
+            post_contents: req.body.postContents,
+            user_id: req.session.user_id
         })
         res.status(200).json(postData)
         console.log("added to database")
