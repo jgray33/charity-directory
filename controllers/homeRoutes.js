@@ -4,16 +4,50 @@ const { Category } = require("../models");
 const Charity = require("../models/Charity");
 const User = require("../models/User");
 const Post = require("../models/Post")
+const withAuth = require("../utils/auth")
 
+// Homepage
 router.get("/", async (req, res) => {
-  res.render("homepage");
+  res.render("homepage"); 
 });
 
-router.get("/dashboard", async (req, res) => {
-  res.render("dashboard");
+// Login page
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
 });
 
-router.get("/newsfeed", async (req, res) => {
+// Signup page
+router.get("/get-involved", withAuth, async (req, res) => {
+  res.render("getInvolved", {});
+});
+
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
+
+// Dashboard - render all the user's posts
+router.get("/dashboard", withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findAll({
+      where: {user_id: req.session.user_id},
+    })
+    const posts = postData.map((post) => post.get({plain: true}))
+    res.render("dashboard", {
+      posts
+    });
+}
+catch (err){
+  console.log(err)
+}
+});
+
+// Newsfeed - render all the posts 
+router.get("/newsfeed", withAuth, async (req, res) => {
 try {
   const newsfeedData = await Post.findAll({
     include:[ {model: User }]
@@ -27,19 +61,9 @@ try {
 }
 });
 
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  res.render("login");
-});
 
-router.get("/get-involved", async (req, res) => {
-  res.render("getInvolved", {});
-});
-
-router.get("/all", async (req, res) => {
+// Render all the charities on the charities page
+router.get("/all", withAuth, async (req, res) => {
   try {
     const charityData = await Charity.findAll();
     const profiles = charityData.map((profile) => profile.get({ plain: true }));
@@ -50,7 +74,8 @@ router.get("/all", async (req, res) => {
   }
 });
 
-router.get("/category/:category_name", async (req, res) => {
+// Search by category
+router.get("/category/:category_name", withAuth, async (req, res) => {
     console.log("getting to route")
       try {
     const charityData = await Category.findAll({
@@ -59,7 +84,7 @@ router.get("/category/:category_name", async (req, res) => {
         { model: Charity},
       ]
     });
-    res.status(200).json(charityData)
+    // res.status(200).json(charityData)
     console.log(charityData[0].charities[0].charity_name)
 
     if (!charityData) {
@@ -68,14 +93,15 @@ router.get("/category/:category_name", async (req, res) => {
       return;
     }
         const profiles = charityData.map((profile) => profile.get({ plain: true }));
-    res.render("charitypage", { profiles });
+    res.render("charity-search", { profiles });
   } catch (err) {
     res.status(500).json(err);
     console.log(err);
   }
 });
 
-router.get("/search/:charity_name", async (req, res) => {
+// Search by charity name
+router.get("/search/:charity_name", withAuth, async (req, res) => {
   console.log("Getting to route");
   try {
     const charityData = await Charity.findOne({
@@ -98,12 +124,5 @@ router.get("/search/:charity_name", async (req, res) => {
   }
 });
 
-router.get("/signup", (req, res) => {
-  res.render("signup");
-});
-
-router.get("/test", (req, res) => {
-  res.render("test");
-});
 
 module.exports = router;

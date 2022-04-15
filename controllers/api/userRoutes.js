@@ -9,7 +9,7 @@ router.post("/signup", async (req, res) => {
       req.session.user_id = userData.id;
       req.session.username = userData.username;
       req.session.logged_in = true;
-      res
+      req.session.charity = true
         .status(201)
         .json({ message: `Successfully created ${userData.username}` });
     });
