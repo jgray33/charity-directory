@@ -16,7 +16,7 @@ async function dashboardBtn(event) {
     const postContents = contents.value;
 
 if (postTitle && postContents) {    
-    const response = await fetch("/api/post", {
+    const response = await fetch("api/post", {
       method: "POST",
       body: JSON.stringify({
         postTitle,

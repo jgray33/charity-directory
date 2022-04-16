@@ -13,8 +13,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req,res) => {
     console.log("at the post route")
-    console.log(req.body)
-    try {
+       try {
         const postData = await Post.create({
             post_title: req.body.postTitle,
             post_contents: req.body.postContents,
