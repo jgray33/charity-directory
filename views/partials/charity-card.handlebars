@@ -1,22 +1,18 @@
-
-    {{!-- <div class="container mt-4 mb-4 p-3 d-flex justify-content-center" > --}}
-        <div class="card p-4" style="background-color: aquamarine;">
-            <div class=" image d-flex flex-column justify-content-center align-items-center"> <span
-                    class="name mt-3">{{charity_name}}</span> <span class="idd">INFORMATION</span>
-                <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">WEBSITE</span> <span><i class="fa fa-copy"></i></span> </div>
-                <!-- If user.id is the same as the creator, this button is on show -->
-                <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Visit Profile</button> </div>
-                <!-- If -->
-                <div class="text mt-3"> <span>{{jadjg}}<br></div>
-                <div class="text mt-3"> <span>{{TELEPHONE}}<br></div>
-                <div class="text mt-3"> <span>{{address}}<br></div>
-                <div class="text mt-3"> <span>{{facebook}}<br></div>
-                <div class="text mt-3"> <span>{{opening_hours}}<br></div>
-                <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i
-                            class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i
-                            class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
-                <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May,2021</span> </div>
+  <div class="charity-card container mt-5">
+      <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+          <div class="card" id="charity-card">
+            <h4 class="card-header">{{charity_name}}</h4>
+            <div class="card-body">
+              <p class="card-text">
+                {{description}}
+              </p>
+              <p><b>Telephone Number:</b>{{telephone_number}}</p>
+              <p><b>Opening Hours:</b> {{opening_hours}}</p>
+              <a href="{{website}}" class="all-btn">Visit Website</a>
+              <a href="{{donation_page}}" class="all-btn">Donate</a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-     

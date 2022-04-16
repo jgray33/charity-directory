@@ -10,8 +10,7 @@ router.post("/signup", async (req, res) => {
       req.session.username = userData.username;
       req.session.logged_in = true;
       req.session.charity = true
-        .status(201)
-        .json({ message: `Successfully created ${userData.username}` });
+        res.render("homepage")
     });
   } catch (err) {
     res.status(400).json(err);
