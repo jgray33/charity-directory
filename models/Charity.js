@@ -52,7 +52,6 @@ Charity.init(
     },
   },
 
-<<<<<<< HEAD
   aboutUs2: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -75,9 +74,7 @@ value2: {
 
 
 {
-=======
   {
->>>>>>> main
     sequelize,
     timestamps: false,
     freezeTableName: true,

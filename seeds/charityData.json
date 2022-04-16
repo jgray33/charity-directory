@@ -7,7 +7,6 @@
         "telephone_number": "0121 785 8393",
         "facebook": "BDH",
         "opening_hours": "9:00am - 1:30pm",
-<<<<<<< HEAD
         "values": "Our vision is a world where every cat is treated with kindness and an understanding of its needs",
         "value2":"Our new strategy acknowledges that cat welfare education and information for adults and children will be essential to achieving our vision of a world where every cat is treated with kindness and an understanding of its needs. ",
         "aboutUs": "about us",
@@ -39,31 +38,6 @@
         "aboutUs": " about us",
         "aboutUs2":"These include the charity's flagship adoption centre in Chelwood Gate, Sussex where our administrative offices can also be found Cats Protection is governed by a Board of Trustees.",
         "aboutUs3":"There are so many adorable cats available for adoption in our centres, each of them with a unique story and a personality ready-made!",
-=======
-        "donation_page": "https://birminghamdogshome.org.uk/support-us/donate/online-donations/",
-        "category_id": 2
-    }, 
-    {
-        "charity_name": "Cat's Protections",
-        "description": "Birmingham Adoption Centre is the largest rehoming centre in the West Midlands. Thanks to a team of dedicated staff and volunteers, each year we successfully find forever homes for over 1000 cats and kittens from the Birmingham area.",
-        "address": "123 Animal Street",
-        "website": "https://www.cats.org.uk/",
-        "telephone_number": "0121 785 8393",
-        "facebook": "https://www.facebook.com/catsprotection",
-        "opening_hours": "9:00am - 1:30pm",
-        "donation_page": "https://www.cats.org.uk/donate",
-        "category_id": 1
-    }, 
-    {
-        "charity_name": "Avian Angels",
-        "description": "Avian Angels is a UK based Parrot Rescue offering a friendly rehoming service which is provided by our team of volunteers with many years experience in the care and welfare of many different species of Parrots.",
-        "address": "123 Animal Street",
-        "website": "https://www.avianangelsparrotrescue.com/",
-        "telephone_number": "0121 785 8393",
-        "facebook": "BDH",
-        "opening_hours": "9:00am - 1:30pm",
-        "donation_page": "https://www.powr.io/checkout_screen?unique_label=7c923767_1601666823",
->>>>>>> main
         "category_id": 3
     }, 
     {
