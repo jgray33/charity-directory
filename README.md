@@ -1,40 +1,48 @@
-# Charity-Directory
 
-## Project Requirement 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-For this group project we used everything we've learned over the past six modules to create a real-world full-stack application that we'll be able to showcase to potential employers.
+# Caritas
 
-### Criteria: 
+## Description
+A website that links charities and users. Allows charities to register their charity and create a profile and allows users to create posts to a news feed.
 
-● Use Node.js and Express.js to create a RESTful API.
+- - - - 
 
-● Use Handlebars.js as the template engine.
 
-● Use MySQL and the Sequelize ORM for the database.
+## Table of contents 
 
-● Have both GET and POST routes for retrieving and adding new data.
+* [License](#license)
+* [Deployed link](#deployedlink)
+* [Contributors](#contributors)
+* [Questions](#questions)
 
-● Use at least one new library, package, or technology that we haven’t discussed.
 
-● Have a folder structure that meets the MVC paradigm.
+<a name="license"></a>
+## License 
 
-● Include authentication (express-session and cookies).
+This application is covered under the [MIT](https://opensource.org/licenses/MIT) license.  
 
-● Protect API keys and sensitive information with environment variables.
+<a name="deployedlink"></a>
+## Deployed link 
 
-● Be deployed using Heroku (with data).
+Here is our deployed link: https://aqueous-brook-09754.herokuapp.com/ 
 
-● Have a polished UI.
 
-● Be responsive.
+<a name="contributors"></a>
+## Contributors 
+- Julia Gray
+- Ayaanle Nur
+- Dylan Allison
+- Farah Din
 
-● Be interactive (i.e., accept and respond to user input).
 
-● Meet good-quality coding standards (file structure,  naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+<a name="questions"></a>
+### Questions
 
-● Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+If you have any questions, visit my [GitHub profile](https://www.github.com/jgray33) or email me: julia.gray30@gmail.com 
 
-## Deployed Link:
+
+
 
 
 
