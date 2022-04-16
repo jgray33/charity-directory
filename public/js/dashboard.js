@@ -26,11 +26,11 @@ if (postTitle && postContents) {
     });
 
     if (response.ok) {
-      document.location.replace("/newsfeed")
+      document.location.replace('/');
+      console.log("done")
       console.table(response);
     } else {
-      console.log(response.statusText);
-      console.log(response);
+            console.log(response);
     }
   }
 }
@@ -42,13 +42,13 @@ async function deletePost(e) {
     method: "DELETE",
   })
   if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.reload()
   } else {
     alert('Failed to delete project');
   }
 }
 
 
-deleteBtn.addEventListener("click", deletePost)
+// deleteBtn.addEventListener("click", deletePost)
 
 dashBtn.addEventListener("click", dashboardBtn);
