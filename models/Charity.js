@@ -3,45 +3,56 @@ const sequelize = require("../config/connection");
 
 class Charity extends Model {}
 
-Charity.init({
-  id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  charity_name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  address: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  telephone_number: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  facebook: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  opening_hours: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  category_id: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: "category",
-      key: "id"
+Charity.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-  },
-    aboutUs: {
+    charity_name: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    website: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    telephone_number: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    facebook: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    opening_hours: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    donation_page: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "category",
+        key: "id",
+      },
+    },
   },
 
+<<<<<<< HEAD
   aboutUs2: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -64,11 +75,15 @@ value2: {
 
 
 {
+=======
+  {
+>>>>>>> main
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "charity"
-});
+    modelName: "charity",
+  }
+);
 
-module.exports = Charity
+module.exports = Charity;

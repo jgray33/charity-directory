@@ -1,9 +1,19 @@
-<div class="card">
-  <h5 class="card-header">{{post_title}}</h5>
-  <div class="card-body">
-    <h5 class="card-title">{{post_title}}</h5>
-    <h5 class="card-title">{{user.username}}</h5>
-    <p class="card-text">{{post_contents}}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+
+
+  <div class="charity-card container mt-5">
+      <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+          <div class="card" id="charity-card">
+            <h4 class="card-header">{{post_title}}</h4>
+            <div class="card-body">
+              <p class="card-text">
+                {{post_contents}}
+              </p>
+              <p><b>Posted by: </b>{{user.username}}</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    

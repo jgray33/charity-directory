@@ -7,10 +7,13 @@ router.post("/", async (req,res) => {
     try {
         const charityData = await Charity.create({
             charity_name: req.body.charName,
+            description: req.body.charDesc,
             address: req.body.addr,
+            website: req.body.charWebsite,
             telephone_number: req.body.number,
             facebook: req.body.fb,
-            opening_hours: req.body.hours
+            opening_hours: req.body.hours,
+            donation_page: req.body.charDon
         })
         res.status(200).json(charityData)
         console.log("added to database")

@@ -1,11 +1,13 @@
+{{#each profiles as |profile|}}
+{{log profile}}
   <div class="charity-card container mt-5">
       <div class="d-flex justify-content-center row">
         <div class="col-md-10">
           <div class="card" id="charity-card">
-            <h4 class="card-header">{{charity_name}}</h4>
+            <h4 class="card-header">{{charities.charity_name}}</h4>
             <div class="card-body">
               <p class="card-text">
-                {{description}}
+                {{charities.description}}
               </p>
               <p><b>Telephone Number:</b>{{telephone_number}}</p>
               <p><b>Opening Hours:</b> {{opening_hours}}</p>
@@ -16,3 +18,4 @@
         </div>
       </div>
     </div>
+{{/each}}
