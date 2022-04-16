@@ -4,20 +4,41 @@ const { Category } = require("../models");
 const Charity = require("../models/Charity");
 const User = require("../models/User");
 const Post = require("../models/Post")
-
-=======
 const withAuth = require("../utils/auth")
 
 
 // Homepage
 router.get("/", async (req, res) => {
-  res.render("homepage");
+    res.render("homepage");
 });
 
-router.get("/dashboard", async (req, res) => {
-  res.render("dashboard");
+// Our philosophy page
+router.get("/our-philosophy", withAuth, async (req, res) => {
+    res.render("our-philosophy");
 });
 
+
+// Login page
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
+});
+
+// Sign up page
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
+// Get involved 
+router.get("/get-involved", withAuth, async (req, res) => {
+  res.render("getInvolved", {});
+});
+
+
+// Render news feed with all the user's posts
 router.get("/newsfeed", async (req, res) => {
 try {
   const newsfeedData = await Post.findAll({
@@ -30,24 +51,6 @@ try {
   res.status(500).json(err)
   console.log(err)
 }
-});
-
-// Login page
-router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  res.render("login");
-});
-
-// Signup page
-router.get("/get-involved", withAuth, async (req, res) => {
-  res.render("getInvolved", {});
-});
-
-router.get("/signup", (req, res) => {
-  res.render("signup");
 });
 
 
@@ -66,22 +69,6 @@ catch (err){
   console.log(err)
 }
 });
-
-// Newsfeed - render all the posts 
-router.get("/newsfeed", withAuth, async (req, res) => {
-try {
-  const newsfeedData = await Post.findAll({
-    include:[ {model: User }]
-  })
-  const posts = newsfeedData.map((post) => post.get({plain:true}))
-  res.render("newsfeed", {posts})
-  console.log(posts)
-} catch (err) {
-  res.status(500).json(err)
-  console.log(err)
-}
-});
-
 
 // Render all the charities on the charities page
 router.get("/all", withAuth, async (req, res) => {
@@ -114,7 +101,7 @@ router.get("/category/:category_name", withAuth, async (req, res) => {
       return;
     }
         const profiles = charityData.map((profile) => profile.get({ plain: true }));
-    res.render("charity-search", { profiles });
+    res.render("category-search", { profiles });
 
   } catch (err) {
     res.status(500).json(err);
@@ -144,11 +131,6 @@ router.get("/search/:charity_name", withAuth, async (req, res) => {
     res.status(500).json(err);
     console.log(err);
   }
-});
-
-
-router.get("/test", (req, res) => {
-  res.render("test");
 });
 
 module.exports = router;

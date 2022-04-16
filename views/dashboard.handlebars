@@ -1,62 +1,35 @@
-{{!-- <div class="container"> --}}
+<br>
+
+<div class="container dashboard-container">
     <div class="row">
-        <div class="col-6">
-
-
-
-        </div>
-        <div class="col-6">
-            <div> New post</div>
-            <form class="main-form">
-                <div class="flex">
-                    <div class=“charity”>
-                        <label class=“form-label” id="">Title</label>
-                        <input type=“text” class="form-control" id="title-dash" />
-                    </div>
-
-                    <div class="flex">
-                        <label class=“form-label” id="dashboard-label">Contents</label>
-                        <input type=“text” class="form-control" id="contents-dash" />
-                    </div>
-
-                    <button type="submit" class="dashboard-btn" id="dashboard-btn">Submit</button>
-                </div>
-
-
-            </form>
-        </div>
-    </div>
-{{!-- </div> --}}
-
-<div class="container rounded bg-white mt-5 mb-5">
-    <div class="row" >
-        <!-- First column with picture in  -->
-        <div class="col-md-3 border-right" >
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{USERNAME}}</span><span class="text-black-50">{{EMAIL}}</span><span> </span></div>
-        </div>
-
-<!-- Second column with form in  -->
-        <div class="col-md-5 border-right"  >
-            <div class="p-3 py-5" >
-                <div class="d-flex justify-content-between align-items-center mb-3" >
-                    <h4 class="text-right">Your posts</h4>
-                </div>
-                
-                
+        <div class="col">
+<div class ="all-h1"> Your posts </div>
+<br>
             {{#each posts as |post|}}
             {{>dashboard}}
             {{/each}}
-            
+        </div>
 
-<!-- Third column with experience in  -->
-        <div class="col-md-4">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center experience"><span>Add a post</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>Post</span></div><br>
-                <div class="col-md-12"><label class="labels">Title</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
-                <div class="col-md-12"><label class="labels">Post contents</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+
+        <div class="col">
+            <div class="all-h1"> Add a post </div>
+            <br>
+
+        
+            <div class="col-md-12">Title<input id="title-dash" type="text" class="form-control" placeholder="" value="">
+            </div> <br>
+            <div class="col-md-12">Post contents<input id="contents-dash" type="text" class="form-control textarea"
+                    placeholder="" value=""></div>
+            <br>
+            <div class="col-md-6"><a href="/post/{{id}}" class="btn all-btn" id="dashboard-btn">Post</a>
+            
             </div>
+            <br>
         </div>
     </div>
+
+
+</div>
 
 
 
@@ -68,6 +41,3 @@
 
 
 <script src="/js/dashboard.js"></script>
-
-
-
